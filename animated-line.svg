@@ -1,1 +1,40 @@
 
+<svg width="1200" height="6" viewBox="0 0 1200 6" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="25%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="75%" stop-color="#84CC16"/>
+      <stop offset="100%" stop-color="#F97316"/>
+
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        from="-1 0"
+        to="1 0"
+        dur="5s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect
+    x="0"
+    y="1"
+    width="1200"
+    height="4"
+    rx="2"
+    fill="url(#gradient)"
+    filter="url(#glow)"
+  />
+
+</svg>
